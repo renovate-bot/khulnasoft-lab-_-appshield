@@ -26,7 +26,7 @@ jobs:
       - name: Compress
         run: tar -C bundle -czvf bundle.tar.gz .
       - name: Login to GitHub Packages Container registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ env.GH_USER }}
