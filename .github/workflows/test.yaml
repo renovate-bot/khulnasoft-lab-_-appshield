@@ -15,7 +15,7 @@ env:
 jobs:
   opa-tests:
     name: OPA tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
         run: opa test -v kubernetes/ docker/
   integration-tests:
     name: Integration tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
